@@ -1,0 +1,13 @@
+<div class="header" (click)="toggle()">
+  <div class="headerTitle">
+    {{ question }}
+  </div>
+  <div [@rotatedState]="!showBody ? 'default' : 'rotated'" class="plus">
+    <i class="ion-ios-add"></i>
+  </div>
+</div>
+<div [@smoothCollapse]="!showBody ? 'initial' : 'final'">
+  <div class="acc-body">
+    <ng-content></ng-content>
+  </div>
+</div>

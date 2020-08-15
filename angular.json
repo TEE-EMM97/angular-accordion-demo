@@ -24,6 +24,16 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
+              {
+                "glob": "package.json",
+                "input": "../",
+                "output": "./assets/"
+              },
+              {
+                "glob": "faqs.json",
+                "input": "./",
+                "output": "./assets/"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
@@ -124,6 +134,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "accordion-demo"
 }
