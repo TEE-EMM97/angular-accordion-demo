@@ -1,24 +1,11 @@
 <div class="card">
-  <div>have a question? we can help.</div>
+  <h2>have a question? we can help</h2>
 
-  <app-accordion>
-    <app-accordion-item question="Title 1">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere expedita,
-      minima consequatur voluptate, vel consequuntur esse nesciunt molestiae
-      facilis non sed sequi, perferendis recusandae et ea explicabo nihil
-      quaerat sint.
-    </app-accordion-item>
-    <app-accordion-item question="Title 2">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere expedita,
-      minima consequatur voluptate, vel consequuntur esse nesciunt molestiae
-      facilis non sed sequi, perferendis recusandae et ea explicabo nihil
-      quaerat sint.
-    </app-accordion-item>
-    <app-accordion-item question="Title 3">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere expedita,
-      minima consequatur voluptate, vel consequuntur esse nesciunt molestiae
-      facilis non sed sequi, perferendis recusandae et ea explicabo nihil
-      quaerat sint.
+  <app-accordion *ngFor="let item of items; index as i">
+    <app-accordion-item question="Q{{ i + 1 }} {{ item.question }}">
+      <p class="para-style">
+        {{ item.answer }}
+      </p>
     </app-accordion-item>
   </app-accordion>
 </div>

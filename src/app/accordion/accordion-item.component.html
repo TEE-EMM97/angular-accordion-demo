@@ -1,9 +1,13 @@
-<div class="header" (click)="toggle()">
-  <div class="headerTitle">
-    {{ question }}
-  </div>
-  <div [@rotatedState]="!showBody ? 'default' : 'rotated'" class="plus">
-    <i class="ion-ios-add"></i>
+<div
+  class="header"
+  (click)="toggle()"
+  [@activeState]="!showBody ? 'inactive' : 'active'"
+>
+  <div class="headerTitle">{{ question }}</div>
+  <div class="plus">
+    <div [@rotatedState]="!showBody ? 'default' : 'rotated'">
+      <i class="ion-ios-add"></i>
+    </div>
   </div>
 </div>
 <div [@smoothCollapse]="!showBody ? 'initial' : 'final'">

@@ -1,7 +1,8 @@
 @import url("https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
 
 .header {
-  border-bottom: 1px solid rgba(202, 202, 202);
+  border-bottom: 1px solid rgba(0, 0, 0);
   min-height: 30px;
   cursor: pointer;
   display: flex;
@@ -16,17 +17,30 @@
     font-weight: 600;
   }
 
-  .acc-body {
-    min-height: 30px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    line-height: 1.5rem;
-    border-bottom: 1px solid #dcdcdc;
+  .plus {
+    font-size: 38px;
+    background-color: #fed230;
+    width: 58px;
+    height: 58px;
+    margin: auto;
+    text-align: center;
   }
+}
 
-  .add {
-    font-size: 18px;
-    color: #000;
+.acc-body {
+  min-height: 30px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem;
+  border-bottom: 3px solid rgba(0, 0, 0);
+  // font-size: 50px;
+}
+
+@media only screen and (max-width: 760px) {
+  .plus {
+    font-size: 20px !important;
+    height: 30px !important;
+    width: 30px !important;
   }
 }

@@ -8,6 +8,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class AppComponent {
   title = "accordion-demo";
+
   url = `http://localhost:4200/assets/faqs.json`;
   items = [];
 
@@ -16,12 +17,12 @@ export class AppComponent {
       .get(this.url)
       .toPromise()
       .then((data) => {
-        console.log(data);
-        for (let question in data) {
-          if (data.hasOwnProperty(question)) {
-            this.items.push(data[question]);
+        for (let key in data) {
+          if (data.hasOwnProperty(key)) {
+            this.items.push(data[key]);
           }
         }
+        console.log(data);
       });
   }
 }
