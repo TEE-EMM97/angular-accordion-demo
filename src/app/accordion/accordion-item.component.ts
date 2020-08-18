@@ -35,7 +35,14 @@ import {
       state("default", style({ transform: "rotate(0)" })),
       state(
         "rotated",
-        style({ transform: "rotate(-45deg)", textAlign: "center" })
+        style({
+          transform: "rotate(-45deg)",
+          textAlign: "center",
+          paddingTop: 0,
+          paddingRight: "2px",
+          paddingLeft: 0,
+          paddingBottom: "2px",
+        })
       ),
       transition("default <=> rotated", animate("250ms")),
     ]),
@@ -50,6 +57,7 @@ import {
 })
 export class AccordionItemComponent implements OnInit {
   @Input() question: string;
+  @Input() answer: string;
   showBody = false;
 
   url = `http://localhost:4200/assets/faqs.json`;
